@@ -1,0 +1,14 @@
+## 🌐 HTTP/3 vs HTTP/4: What Happened and What's Coming
+
+| Feature/Aspect           | HTTP/3 (✅ Happened)                                     | HTTP/4 (🔜 Coming / Planned)                                  |
+|--------------------------|----------------------------------------------------------|---------------------------------------------------------------|
+| Release Status           | Released in 2022 (RFC 9114)                              | Not yet released (still in discussion/planning phase)         |
+| Transport Protocol       | Uses **QUIC** (UDP-based)                                | Likely QUIC or future upgrade                                 |
+| Encryption               | Built-in TLS 1.3 (Always encrypted)                      | Will remain encrypted by default                              |
+| Multiplexing             | Yes, with no head-of-line blocking                       | Will likely improve or simplify this further                  |
+| Performance Goals        | Faster connection setup, better for mobile               | Even more optimization, especially for modern web/apps        |
+| TCP Dependency           | Removed (moved from TCP to QUIC/UDP)                     | Still independent of TCP (QUIC continues or evolves)          |
+| Backward Compatibility   | New protocol but supports fallback to HTTP/2             | May remove legacy support for simplicity                      |
+| Focus Areas              | Speed, mobile performance, connection reliability        | Simplicity, modernization, clean break from legacy features   |
+| Adoption                 | Supported by major browsers and CDNs                     | Not adopted (doesn’t exist yet officially)                    |
+| Official RFC?            | ✅ Yes (RFC 9114)                                         | ❌ Not yet (no RFC, under future consideration)                |
