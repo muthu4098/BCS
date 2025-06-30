@@ -44,7 +44,7 @@ var student = {
   college: "SAC",
   isRich: true,
   "personal hobbies": ["Hockey", "Traveling", "Cricket"],
-  
-x = "personal hobbies",
+
+  x: ["personal hobbies"],
 };
-console.log(x[2])
+console.log(x[2]);
