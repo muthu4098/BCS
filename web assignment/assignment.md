@@ -11,6 +11,7 @@ const add = (x1, x2) => x1 + x2;
 console.log(add(5, 3));
 console.log(add(10, 7));
 ```
+===============================================================================================================
 
 ## TASK-2
 
@@ -28,7 +29,7 @@ const greetUser = (name) => {
 console.log(greetUser("Alice"));
 console.log(greetUser("Bob"));
 ```
-
+=================================================================================================================
 ## TASK-3
 
 ### Simple Optional Chaining
@@ -38,13 +39,15 @@ const user1 = { name: "Alice", age: 25 };
 const user2 = { name: "Bob" };
 const user3 = null;
 
-const getUserAge = (user) => {};
+const getUserAge = (user) => {
+  
+};
 
 console.log(getUserAge(user1));
 console.log(getUserAge(user2));
 console.log(getUserAge(user3));
 ```
-
+=============================================================================================================
 ## Basic Object Destructuring
 
 ### Exercise 9
@@ -52,7 +55,7 @@ console.log(getUserAge(user3));
 1.Extract properties from an object using destructuring assignment
 
 ### Ans
-
+```js
 const person = { name: "Alice", age: 30, city: "New York" };
 
 // ===== YOUR CODE BELOW =====
@@ -64,11 +67,11 @@ return `${name} is ${age} years old`;
 };
 
 console.log(extractPersonInfo(person));
-
+```
 ### Expected output
 
-Alice is 30 years old
-
+# Alice is 30 years old
+===============================================================================================================
 ## Exercise 10
 
 ### Extract elements from an array using destructuring assignment.
@@ -93,3 +96,5 @@ console.log(getFirstTwoColors(colors));
 ## Expected Output:
 
 First: red, Second: green
+===================================================================================================================
+
