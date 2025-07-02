@@ -1,5 +1,3 @@
-Here’s your enhanced and structured version of the notes ✅ — with emojis, corrected explanations, and better formatting for clarity and learning! 🧠✨
-
 ---
 
 # 📘 JavaScript Functions — Fundamentals

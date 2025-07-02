@@ -1,4 +1,3 @@
-Here’s your **enhanced and structured** version of the notes ✅— with clear explanations, real-world context, and fun ✨emojis to make it easier to understand and remember!
 
 ---
 

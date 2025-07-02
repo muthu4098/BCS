@@ -76,11 +76,11 @@ console.log(extractPersonInfo(person));
 
 ### Extract elements from an array using destructuring assignment.
 
-### Answer
-
-```js
-const colors = ["red", "green", "blue", "yellow"];
-const coordinates = [10, 20];
+  ### Answer
+  
+  ```js
+  const colors = ["red", "green", "blue", "yellow"];
+  const coordinates = [10, 20];
 
 // ===== YOUR CODE BELOW =====
 // Use array destructuring to extract first two colors

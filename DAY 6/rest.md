@@ -1,5 +1,3 @@
-Here’s your **enhanced and well-structured** version of the notes, with clear explanations, corrected terminology, and ✨emojis for easier understanding and memorization.
-
 ---
 
 # 📚 JavaScript Core Concepts (Simplified & Structured)
@@ -158,9 +156,5 @@ let a = 10;
 * Avoid `var` in modern code — use `let` or `const` instead ✅
 
 ---
-
-### 🎯 **Golden Quote**
-
-> **"Enjoy the game. Enjoy your coding. Don't panic. 😎🚀"**
 
 ---

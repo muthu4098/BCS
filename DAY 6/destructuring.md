@@ -1,9 +1,5 @@
-Here's your **enhanced and structured** version of the notes — made clear, factually accurate, and full of helpful ✨emojis✨ to make learning more fun and effective!
-
 ---
-
 # 📘 JavaScript Essentials: Destructuring, Spread, and Nested Objects
-
 ---
 
 ## 🧠 **1. Nested Objects & Accessing Properties**
@@ -14,17 +10,17 @@ const student = {
   age: 20,
   address: {
     city: "Thrichy",
-    state: "TN"
+    state: "TN",
   },
-  hobbies: ["cricket", "football", "carrom"]
+  hobbies: ["cricket", "football", "carrom"],
 };
 ```
 
 ### 📝 Accessing Nested Values:
 
 ```js
-console.log(student.address.city);   // ➡️ Thrichy
-console.log(student.address.state);  // ➡️ TN
+console.log(student.address.city); // ➡️ Thrichy
+console.log(student.address.state); // ➡️ TN
 console.log(typeof student.address); // ➡️ "object"
 ```
 
@@ -39,10 +35,10 @@ console.log(typeof student.address); // ➡️ "object"
 ```js
 const {
   address: { city },
-  hobbies: [, hobby] // Skips the first hobby, gets the second
+  hobbies: [, hobby], // Skips the first hobby, gets the second =holes
 } = student;
 
-console.log(city);  // ➡️ Thrichy
+console.log(city); // ➡️ Trichy
 console.log(hobby); // ➡️ football
 ```
 
@@ -54,13 +50,15 @@ console.log(hobby); // ➡️ football
 const userData = {
   id: 1,
   name: "Alice",
-  hobbies: ["reading", "hiking", "cooking"]
+  hobbies: ["reading", "hiking", "cooking"],
 };
 
-const { hobbies: [hobby1, hobby2, ...remainingHobbies] } = userData;
+const {
+  hobbies: [hobby1, hobby2, ...remainingHobbies],
+} = userData;
 
-console.log(hobby1);           // ➡️ reading
-console.log(hobby2);           // ➡️ hiking
+console.log(hobby1); // ➡️ reading
+console.log(hobby2); // ➡️ hiking
 console.log(remainingHobbies); // ➡️ ["cooking"]
 ```
 
@@ -95,13 +93,13 @@ console.log(rest); // ➡️ [30, 40, 50]
 const book = {
   name: "Harry Potter",
   author: "J.K. Rowling",
-  authorAge: 45
+  authorAge: 45,
 };
 
 const details = {
   year: 2002,
   price: 1200,
-  authorAge: 55
+  authorAge: 55,
 };
 
 const fullDetails = { ...book, ...details };
@@ -110,9 +108,9 @@ console.log(fullDetails);
 
 ### 🧠 What Happens Here?
 
-* Properties from `details` **override** the same properties in `book`
-* `authorAge` becomes `55` (from `details`)
-* ✅ Used for shallow merging (top-level only)
+- Properties from `details` **override** the same properties in `book`
+- `authorAge` becomes `55` (from `details`)
+- ✅ Used for shallow merging (top-level only)
 
 ---
 
@@ -138,4 +136,3 @@ console.log(x); // ➡️ "Default"
 | **Default Values**       | Fallback when value is `undefined`      | `[a = 100] = []`        |
 
 ---
-

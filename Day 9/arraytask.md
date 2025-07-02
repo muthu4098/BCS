@@ -240,6 +240,7 @@ const movies = [
 const getAverageRatingAfterYear = (movies, year) => {
 
 
+
   // Your code here
   
 };

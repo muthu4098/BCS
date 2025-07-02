@@ -1,0 +1,40 @@
+Great idea! Adding a **"Chaining Allowed"** column helps developers quickly see whether they can chain another method call after using a specific array method.
+
+Here’s the **updated table** with a `Chaining Allowed` column:
+
+---
+
+| Method          | Mutates | Use / Purpose                 | Returns           | Empty Parameters Allowed | Chaining Allowed | Notes                                  |
+| --------------- | ------- | ----------------------------- | ----------------- | ------------------------ | ---------------- | -------------------------------------- |
+| `push()`        | ✅ Yes   | Add element(s) to end         | `Number`          | ✅ Yes (returns length)   | ❌ No             | No elements added if empty             |
+| `pop()`         | ✅ Yes   | Remove last element           | `Any`/`undefined` | ✅ Yes                    | ❌ No             | Removes and returns last element       |
+| `shift()`       | ✅ Yes   | Remove first element          | `Any`/`undefined` | ✅ Yes                    | ❌ No             | Removes and returns first element      |
+| `unshift()`     | ✅ Yes   | Add element(s) to beginning   | `Number`          | ✅ Yes (returns length)   | ❌ No             | No elements added if empty             |
+| `splice()`      | ✅ Yes   | Add/remove/replace elements   | `Array`           | ❌ No (requires index)    | ✅ Yes            | Needs at least one index parameter     |
+| `sort()`        | ✅ Yes   | Sorts array                   | `Array`           | ✅ Yes                    | ✅ Yes            | Sorts lexicographically by default     |
+| `reverse()`     | ✅ Yes   | Reverse order                 | `Array`           | ✅ Yes                    | ✅ Yes            | In-place reversal                      |
+| `fill()`        | ✅ Yes   | Replace values                | `Array`           | ❌ No (requires value)    | ✅ Yes            | Needs at least fill value              |
+| `copyWithin()`  | ✅ Yes   | Copy part of array            | `Array`           | ❌ No                     | ✅ Yes            | Requires at least 1 index              |
+| `concat()`      | ❌ No    | Merge arrays                  | `Array`           | ✅ Yes                    | ✅ Yes            | Returns shallow copy if no param       |
+| `slice()`       | ❌ No    | Extract sub-array             | `Array`           | ✅ Yes                    | ✅ Yes            | Copies whole array if empty            |
+| `map()`         | ❌ No    | Transform elements            | `Array`           | ❌ No                     | ✅ Yes            | Requires callback function             |
+| `filter()`      | ❌ No    | Filter elements               | `Array`           | ❌ No                     | ✅ Yes            | Requires callback function             |
+| `reduce()`      | ❌ No    | Reduce to single value        | `Any`             | ❌ No                     | ❌ No             | Needs callback, optional initial value |
+| `reduceRight()` | ❌ No    | Reduce right-to-left          | `Any`             | ❌ No                     | ❌ No             | Same as `reduce()` but from right      |
+| `find()`        | ❌ No    | Find first match              | `Any`/`undefined` | ❌ No                     | ❌ No             | Requires callback function             |
+| `findIndex()`   | ❌ No    | Find index of first match     | `Number`          | ❌ No                     | ❌ No             | Requires callback function             |
+| `includes()`    | ❌ No    | Check for existence           | `Boolean`         | ❌ No                     | ❌ No             | Needs search element                   |
+| `indexOf()`     | ❌ No    | Get index of element          | `Number`          | ❌ No                     | ❌ No             | Needs search element                   |
+| `lastIndexOf()` | ❌ No    | Last index of element         | `Number`          | ❌ No                     | ❌ No             | Needs search element                   |
+| `every()`       | ❌ No    | All elements match condition  | `Boolean`         | ❌ No                     | ❌ No             | Needs callback function                |
+| `some()`        | ❌ No    | Any element matches condition | `Boolean`         | ❌ No                     | ❌ No             | Needs callback function                |
+| `join()`        | ❌ No    | Join into string              | `String`          | ✅ Yes (uses ",")         | ❌ No             | Empty param defaults to comma          |
+| `toString()`    | ❌ No    | Convert to string             | `String`          | ✅ Yes                    | ❌ No             | Always works, comma-separated          |
+| `flat()`        | ❌ No    | Flatten nested arrays         | `Array`           | ✅ Yes (depth = 1)        | ✅ Yes            | Default depth = 1                      |
+| `flatMap()`     | ❌ No    | Map + flatten                 | `Array`           | ❌ No                     | ✅ Yes            | Requires callback function             |
+| `at()`          | ❌ No    | Get element at index          | `Any`/`undefined` | ❌ No                     | ❌ No             | Requires index                         |
+| `forEach()`     | ❌ No    | Loop through elements         | `undefined`       | ❌ No                     | ❌ No             | Only for side effects, no return       |
+
+---
+
+Would you like this as a downloadable CSV, Markdown file, or printable PDF format?
