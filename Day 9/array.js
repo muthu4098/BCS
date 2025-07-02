@@ -163,6 +163,7 @@ var movies = [
   },
 ];
 
+const movieTitles =
 
 console.log(getAverageRatingAfterYear(movies, 2016));
 console.log(getAverageRatingAfterYear(movies, 2020));
