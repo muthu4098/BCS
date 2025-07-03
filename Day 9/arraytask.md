@@ -237,7 +237,9 @@ const movies = [
 
 // ===== YOUR CODE BELOW =====
 // Write a function that calculates average rating after a specific year
-const getAverageRatingAfterYear = (movies, year) => {
+const getAverageRatingAfterYear = (movies, rating,genre) => {
+
+const movieRating = movies.filter((movie)=>movie == genre)
 
 
 
