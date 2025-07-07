@@ -1,10 +1,10 @@
 Document is html 
 
-1.text transform
+1.text transform -uppercase
 2.text  align
 logical properities
 3.text decoration 
-1._
+1.underline
 2.overline
 3-line thourgh
 4.letter spacing
@@ -21,3 +21,4 @@ trend
 fun
 not old guy
 
+class - if use ifan
