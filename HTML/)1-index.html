@@ -9,18 +9,54 @@
     <!-- Attributes -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Veera</title>
+
+    <!-- Internal CSS -->
+    <style>
+      /* Element selector */
+      h1 {
+        /* Name */
+        color: crimson;
+        /* Hexadecimal 0-9 a-f  rgb */
+        color: #000000;
+        color: #b7741b;
+        /* 0-255 */
+        color: rgb(27 160 183);
+
+        /* Hue Saturation Lightness */
+        color: hsl(158.3deg 72% 36%);
+
+        /* Gamut: Color Range - sRGB 98%. DCPi 100% */
+        color: lch(66 74.02 155.8);
+
+        color: lch(49 71.36 44.04 / 0.6);
+      }
+
+      /* 1px - dot */
+
+      /* Class selector */
+      .highlight {
+        font-size: 18px;
+        /* 400 */
+        font-weight: 600;
+        font-style: italic;
+      }
+    </style>
   </head>
   <!-- Tag / element -->
   <body>
-    <!-- nav bar -->
-    <header></header>
-    <!-- header -->
+    <header>
+      <!-- Nav  -->
+    </header>
+
+    <!-- Heading -->
     <h1>Hello, BCS!!! 😊</h1>
     <h2>Hello, BCS!!! 😊</h2>
     <h3>Hello, BCS!!! 😊</h3>
     <h4>Hello, BCS!!! 😊</h4>
     <h5>Hello, BCS!!! 😊</h5>
     <h6>Hello, BCS!!! 😊</h6>
+
+    <p class="highlight">Veera is from Salem</p>
 
     <p>
       Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quisquam
@@ -39,7 +75,7 @@
     3. Type
     -->
 
-    <h2>Hobbies</h2>
+    <h2 class="highlight">Hobbies</h2>
 
     <ol type="A">
       <li>
@@ -76,5 +112,3 @@
 
 <!-- HTML is forgiving -->
 <!-- <h1>Hello, BCS</h1> -->
-
-

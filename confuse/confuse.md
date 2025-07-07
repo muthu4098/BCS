@@ -19,10 +19,19 @@ console.log(user.address?.city);     // ✅ "New York"
 console.log(user.profile?.city);     // ✅ undefined (no error!)
 ```
 
+### 🔁 Great with Optional Chaining:
+
+```js
+let theme = user?.settings?.theme ?? "light";
+```
+
+---
+
+Let me know if you want a quick practice quiz or visual chart!
 
 
 ---
-##  Nullish Coalescing
+##  Nullish Coalescing -??
 
 ### 🔹 What it does:
 
@@ -61,12 +70,17 @@ console.log(count ?? 10); // 0 ✅
 
 ---
 
-### 🔁 Great with Optional Chaining:
+predicat using boolean
+filter -return 
+some
+find
 
-```js
-let theme = user?.settings?.theme ?? "light";
-```
+every boolean
 
----
 
-Let me know if you want a quick practice quiz or visual chart!
+map 
+find- ture condition return the same data type match value if its no  undefined
+
+math.max(5,6,10)
+array ...spread
+reduce

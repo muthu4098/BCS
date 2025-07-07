@@ -26,7 +26,7 @@ const moreOrders = [
  Write a function that filters out dishes with ratings below 4, then returns a string of dish names separated by commas.
 ```js
 const getHighRatedDishes = (orders) => {
-const dishName = orders.filter(order => order.ratings.every( f => f >= 4))
+const dishName = orders.filter(order => order.ratings.every( fill => fill >= 4))
 const joinNames = dishName.map(name => name.dishName).join(", ")
     return joinNames
 }
@@ -63,6 +63,8 @@ const mergeOrders = (order, ...arr) =>{
     const merged = [...order, ...arr].flat(Infinity)
     return merged
 }
+const mergeOrders1 = (order, ...arr=[]) =>[...order, ...arr]
+
 
 
 console.log(mergeOrders(orders, moreOrders, [2, 3, [3,3,64, 456, 46], 4, 5], [12, 34, 545, 4554])); // Should print the merged array of orders
@@ -73,31 +75,6 @@ console.log(mergeOrders(orders, moreOrders, [2, 3, [3,3,64, 456, 46], 4, 5], [12
     Should print the original array of orders
 
 ===============================================================================================
-6. 📊 Calculate Total Ratings for Chefs
-
-   Write a function that calculates the total number of ratings for each chef.
-
-```js
-   const getTotalRatingsForChefs = (orders)=>{
-    const obj = {}
-    const chef = orders.map(order => {
-      const chefsName = order.chef
-      // console.log(chefsName);
-      
-      const ratingCount = order.ratings.length
-      // console.log(ratingCount);
-      obj[chefsName] = ratingCount
-      
-    })
-    return obj
-   }
-
-   console.log(getTotalRatingsForChefs(orders));
-  ```
-  ## OUTPUT
-   Should print: { "John Doe": 6, "Jane Smith": 3, "Tom Brown": 3, "Alice Green": 3 }
-===============================================================================================
-
 
 4. 🥗 Fetch Dish Names by IDs
 
@@ -111,8 +88,9 @@ const getDishNamesByIds1 = (orders, ...ids) =>{
    })
   //  console.log(dishName,"aaaaa");
    
-  return `Selected Dish: ${dishName.join(", ")}`
+  return `Selected Dish: ${dishName.join(", ")}`  
 }
+---
 const getDishNamesByIds = (orders , ...ids)=>{
   const dishNames = orders.filter(order => ids.includes(order.id) ?? "Unknown Dish")  // .map(order => order.dishName)
   console.log(dishNames);
@@ -121,6 +99,8 @@ const getDishNamesByIds = (orders , ...ids)=>{
   
   return singleName.join(", ") ?? "Unknown Dish"
 }
+const getDishNamesByIds1 = (orders , ...ids)=> ids 
+.map(id=>order.find(order=> order.id==id)?.dishName??"unkown dish")
 
 console.log(getDishNamesByIds(orders, 1, 3, 5));
    
@@ -147,6 +127,11 @@ return `${name} (${category})`
 })
 return dishNames.join(", ")
 }
+---
+const listOrders =(...orders) =>
+
+orders.map(order=>{order?.dishName ?? "Unknown Dish"}order?.category ?? "Unknown Category")
+
 
 console.log(listOrders(...orders));
    Should print: Burger (Fast Food), Pizza (Italian), Sushi (Japanese), Salad (Healthy), Pasta (Italian)
@@ -173,6 +158,9 @@ console.log(listOrders(orders[0], orders[1], orders[11]));
     })
     return obj
    }
+   const getTotalRatingsForChefs1 = (orders)=>
+
+    orders.reduce({(...acc,[acc,chef] : order.ratings.length)},{})
 
    console.log(getTotalRatingsForChefs(orders));
   ```
