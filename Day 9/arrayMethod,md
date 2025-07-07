@@ -2,6 +2,33 @@ Great idea! Adding a **"Chaining Allowed"** column helps developers quickly see 
 
 Here’s the **updated table** with a `Chaining Allowed` column:
 
+
+| Method Name       | Mutates Original Array? | Return Data Type |
+|-------------------|-------------------------|------------------|
+| map()             | No                      | Array            |
+| filter()          | No                      | Array            |
+| slice()           | No                      | Array            |
+| concat()          | No                      | Array            |
+| flat()            | No                      | Array            |
+| flatMap()         | No                      | Array            |
+| toSorted()        | No                      | Array            |
+| toReversed()      | No                      | Array            |
+| toSpliced()       | No                      | Array            |
+| entries()         | No                      | Iterator         |
+| keys()            | No                      | Iterator         |
+| values()          | No                      | Iterator         |
+| every()           | No                      | Boolean          |
+| some()            | No                      | Boolean          |
+| includes()        | No                      | Boolean          |
+| indexOf()         | No                      | Number           |
+| lastIndexOf()     | No                      | Number           |
+| find()            | No                      | Element / undefined |
+| findIndex()       | No                      | Number           |
+| findLast()        | No                      | Element / undefined |
+| findLastIndex()   | No                      | Number           |
+| join()            | No                      | String           |
+| reduce()          | No                      | Any              |
+| reduceRight()     | No                      | Any              |
 ---
 
 | Method          | Mutates | Use / Purpose                 | Returns           | Empty Parameters Allowed | Chaining Allowed | Notes                                  |
@@ -38,3 +65,8 @@ Here’s the **updated table** with a `Chaining Allowed` column:
 ---
 
 Would you like this as a downloadable CSV, Markdown file, or printable PDF format?
+reduce()-+ve->swap
+-ve or 0 = no move
+predicat is a function always return boolean
+ sort compare fuction
+ 

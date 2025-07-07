@@ -75,19 +75,113 @@
 // };
 
 // console.log(JSON.stringify(getEvenNumbers(numbers)));
-//=================================================
-
-const books = [
-  { title: "Infinite Jest", rating: 4.5, genre: "Fiction" },
-  { title: "The Catcher in the Rye", rating: 3.9, genre: "Fiction" },
-  { title: "Sapiens", rating: 4.9, genre: "History" },
-  { title: "A Brief History of Time", rating: 4.8, genre: "Science" },
-  { title: "Clean Code", rating: 4.7, genre: "Technology" },
-];
-
-const getTitles = (books) => {
-  return books.map((book) => book.title);
-  // Code
+//========================================================
+const userData = {
+  user: {
+    profile: {
+      name: "Alice",
+      age: null,
+    },
+  },
 };
 
-console.log(getTitles(books));
+const userWithAge = { user: { profile: { age: 25 } } };
+const userWithoutProfile = { user: {} };
+
+// ===== YOUR CODE BELOW =====
+// Write a function that safely returns the user's age or a default message
+const getUserAge = (data) => {
+  return data?.user?.profile?.age ?? "Age not provided";
+
+  // Your code here
+};
+
+console.log(getUserAge(userData));
+console.log(getUserAge(userWithAge));
+console.log(getUserAge(userWithoutProfile));
+// =======================================================
+const products = [
+  { id: 1, name: "Laptop", price: 1000 },
+  { id: 2, name: "Phone", price: 500 },
+  { id: 3, name: "Tablet", price: 700 },
+];
+
+// ===== YOUR CODE BELOW =====
+// Write a function that calculates the total price of all products
+const getTotalPrice = (products) => {
+  // Your code here
+  return products.reduce((product, crr) => product + crr.price, 0);
+};
+
+console.log(getTotalPrice(products));
+//============================================================================
+const user1 = { name: "Jane", active: true };
+const user2 = { name: "John", active: false };
+const user3 = { name: "Alice", active: null };
+
+// ===== YOUR CODE BELOW =====
+// Write a function that returns a message indicating if the user is active
+const getUserStatus = (user) => {
+  const { name, active } = user;
+
+  const status = user.active ?? "unkown person";
+  return `${name} is currently ${
+    status === true ? "active" : status === false ? "inactive" : "unkown"
+  } `;
+};
+
+// Your code here - use template literals and conditional logic
+
+console.log(getUserStatus(user1));
+console.log(getUserStatus(user2));
+console.log(getUserStatus(user3));
+//==============================================================================================================
+const userProfile = {
+  id: 1,
+  name: "Eve",
+  settings: {
+    theme: "dark",
+  },
+};
+
+const userWithoutSettings = { id: 2, name: "Adam" };
+
+// ===== YOUR CODE BELOW =====
+// Write a function that extracts the user's name and theme with default values
+const getUserSettings = (user) => {
+  // Your code here - use destructuring with default values
+  const { name, settings: { theme = "light" } = {} } = user;
+  return `${name} prefers the ${theme}theme`;
+};
+
+console.log(getUserSettings(userProfile));
+console.log(getUserSettings(userWithoutSettings));
+//================================================================================================================
+
+const employees = [
+  {
+    id: 1,
+    name: "Alice",
+    position: "Developer",
+    skills: ["JavaScript", "React"],
+  },
+  {
+    id: 2,
+    name: "Bob",
+    position: "Manager",
+    skills: ["Leadership", "Communication"],
+  },
+  {
+    id: 3,
+    name: "Charlie",
+    position: "CEO",
+    skills: ["Strategy", "Vision"],
+  },
+];
+
+const addSkill = (employees, newSkill) => {
+  object = { ...employees };
+  return (array = [...object.skills, newSkill]);
+};
+// ===== YOUR CODE BELOW =====
+console.log(JSON.stringify(addSkill(employees, "Problem Solving"), null, 2));
