@@ -8,8 +8,7 @@ logical properities
 2.overline
 3-line thourgh
 4.letter spacing
-5.
-line height
+5.line height
 san sherif -sherif ,,next font fall back
 handwrrien
 serif
@@ -22,3 +21,7 @@ fun
 not old guy
 
 class - if use ifan
+
+<p>/div-get entrie container
+
+block use like inline
