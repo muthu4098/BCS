@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      p {
+        font-size: 24px;
+        font-weight: bold;
+      }
+
+      /* Child Selector */
+      /* div > p {
+        color: purple;
+      } */
+
+      /* Selector 1 & Selector 2 */
+      /* selector1 > selector2 {
+        color: purple
+      } */
+
+      /* div {
+        & > p {
+          color: orange;
+        }
+      } */
+
+      /* div {
+        > p {
+          color: orange;
+        }
+      } */
+
+      /* Descendant Selector */
+      /* div p {
+        color: orange;
+      } */
+      /* 
+      div {
+        p {
+          color: orange;
+        }
+      } */
+
+      /* h1 + p {
+        color: purple;
+      } */
+
+      /* Adjacent Selector */
+      /* h1 {
+        + p {
+          color: purple;
+        }
+      } */
+
+      /* General Sibling (Younger) */
+      /* h1 ~ p {
+        color: purple;
+      } */
+
+      h1 {
+        ~ p {
+          color: purple;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <p>Para 1</p>
+      <p>Para 2</p>
+      <p>Para 3</p>
+      <p>Para 4</p>
+
+      <section>
+        <p>Para 5</p>
+        <h1>Cool 1</h1>
+        <p>Para 6</p>
+        <h2>Cool 2</h2>
+        <div>
+          <p>Para 9</p>
+        </div>
+        <p>Para 7</p>
+        <p>Para 8</p>
+      </section>
+    </div>
+  </body>
+</html>
