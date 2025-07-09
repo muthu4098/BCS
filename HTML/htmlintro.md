@@ -25,3 +25,7 @@ class - if use ifan
 <p>/div-get entrie container
 
 block use like inline
+
+font awesome
+imagekit.io
+color space
