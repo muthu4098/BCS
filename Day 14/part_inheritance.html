@@ -29,62 +29,33 @@
         display: grid;
         place-content: center;
       }
-
-      .insta i {
-        color: violet;
-      }
-
-      .fb {
-        i {
-          color: rgb(62, 75, 255);
-        }
-      }
-
-      .whatsapp {
-        i {
-          color: green;
-        }
-      }
-
-      .x {
-        i {
-          color: black;
-        }
-      }
-
-      .linkedin {
-        i {
-          color: rgb(0, 170, 255);
-        }
-      }
-
       .social-container {
-        font-size: 32px;
         list-style: none;
+        font-size: 32px;
+        font-weight: bold;
+        text-transform: capitalize;
+        padding: 0px;
+        color: purple;
+        /* text-decoration: underline; */
 
-        > li i {
-          color: violet;
-        }
+        /* Not Inherited */
+        border: 4px solid black;
+        margin: 48px 0px;
+        /* height: 500px; */
+        width: 300px;
+        background: plum;
+      }
 
-        > li + li i {
-          color: rgb(62, 75, 255);
-        }
-
-        > li + li + li i {
-          color: green;
-        }
-
-        > li + li + li + li i {
-          color: black;
-        }
-
-        > li + li + li + li + li i {
-          color: rgb(0, 170, 255);
-        }
+      li {
+        color: white;
+      }
+      img{
+        clip-path: polygon(32% 25%, 51% 81%, 59% 38%);
       }
     </style>
   </head>
   <body>
+    
     <ul class="social-container">
       <li><i class="fa-brands fa-instagram"></i> Instagram</li>
       <li><i class="fa-brands fa-facebook"></i> Facebook</li>
@@ -92,5 +63,12 @@
       <li><i class="fa-brands fa-x"></i> Twitter</li>
       <li><i class="fa-brands fa-linkedin"></i> Linkedin</li>
     </ul>
+
+    <p>
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Soluta labore
+      voluptates, explicabo tenetur i
+    </p>
   </body>
 </html>
+
+<!-- !important > Inline Style > ID > class > element > inherited property -->
