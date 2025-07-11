@@ -18,7 +18,9 @@ body {
   place-content: center;
      
 }
-
+.topImage{
+  max-width: 1200px
+}
 
 header {
   display: flex;
@@ -29,6 +31,7 @@ header {
     background-color: var(--primary-bg-clr);
     color: var(--primary-nav-bg);
     border: none;
+    gap: 20px;
   
     font-size: 20px;
     
@@ -38,13 +41,11 @@ header {
   /* display: flex;
   outline: 2px solid red;
   gap: 16px; */
+
 .firstTextbox{
-  display: flex;
-  gap:10px;
-  h2{
-    font-size: 50px;
-  }
-  p{
-    pa
-  }
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  max-width: 1300px;
+  margin:0 auto;
+
 }
