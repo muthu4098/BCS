@@ -17,3 +17,9 @@ color: var(--primary-nav-bg);
 align-items: end;
 border: none;
 }
+section{
+    display: flex;
+    >button{
+        display: block;
+    }
+}
