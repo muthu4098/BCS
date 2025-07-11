@@ -10,3 +10,10 @@
   --ff-primary: Roboto, sans-serif;
   --primary-disabled-text-clr: rgba(0, 0, 0, 0.5);
 }
+
+header>button{
+background-color:  var(--primary-bg-clr);
+color: var(--primary-nav-bg);
+align-items: end;
+border: none;
+}
