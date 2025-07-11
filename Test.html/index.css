@@ -19,12 +19,11 @@ body {
      
 }
 
+
 header {
   display: flex;
   justify-content: flex-end;
-  img{
-    max-width: 100%;
-  }
+
   
   > button {
     background-color: var(--primary-bg-clr);
@@ -35,19 +34,17 @@ header {
     
   }
 }
-section {
-    display: flex;
-  h2{
-    font-size: 50px;
-    outline: 2px solid red;
-    
-   
-  }
-  p{
-  
-    outline: 2px solid yellow;
-  }
+
   /* display: flex;
   outline: 2px solid red;
   gap: 16px; */
+.firstTextbox{
+  display: flex;
+  gap:10px;
+  h2{
+    font-size: 50px;
+  }
+  p{
+    pa
+  }
 }
