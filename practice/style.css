@@ -1,0 +1,29 @@
+:root {
+  --primary-bg-clr: hsl(232.94deg 45.95% 7.25%);
+  --secondary-bg-clr: hsl(245.81deg 38.27% 15.88%);
+  --primary-ft-clr: hsl(0deg 0% 99.8%);
+  --secondary-ft-clr: hsl(245.22deg 11.56% 60.98%);
+  --accent-ft-clr: hsl(276.2deg 62.69% 62.16%);
+}
+body {
+  min-height: 100vh;
+  margin: 0;
+  display: grid;
+  justify-content: center;
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    
+}
+.firstImg{
+  padding: 10px;
+  h2{
+    font-size: 80px;
+    font-weight: 900;
+    width: 500px;
+    justify-content: center;
+    
+  }
+}
