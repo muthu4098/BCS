@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      body {
+        margin: 0;
+        min-height: 100vh;
+        display: grid;
+        place-content: center;
+      }
+
+      .profile-container {
+        /* background: pink; */
+        width: 200px;
+        aspect-ratio: 1 / 1;
+        position: relative;
+        line-height: 0;
+        transition: 1s all;
+
+        > img {
+          /* aspect-ratio: 1 / 1; */
+          object-fit: cover;
+          height: 100%;
+          width: 100%;
+          border-radius: 50%;
+          box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px,
+            rgba(0, 0, 0, 0.1) 0px 2px 4px 0px,
+            rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
+        }
+
+        > p {
+          /* polish  */
+          color: white;
+          background: teal;
+          height: 30px;
+          aspect-ratio: 1 / 1;
+          margin: 0;
+          border-radius: 50%;
+          font-size: 24px;
+
+          /* Center */
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+          /* Move */
+          /* position: relative;
+          top: -175px;
+          left: 168px; */
+
+          position: absolute;
+          top: 5px;
+          right: 30px;
+          transition: 0.2s all ease-in-out;
+        }
+
+        &:hover > p {
+          transform: scale(1.1);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- <p>
+      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Modi
+      consequatur, cumque, nemo magni debitis, molestiae libero aliquid iusto
+      ipsa quod vel velit. Impedit, rerum! Unde illum ipsa repellendus corporis
+      in.
+    </p> -->
+
+    <div class="profile-container">
+      <img
+        src="https://expertphotography.b-cdn.net/wp-content/uploads/2020/08/social-media-profile-photos.jpg"
+        alt=""
+      />
+
+      <p>8</p>
+    </div>
+  </body>
+</html>

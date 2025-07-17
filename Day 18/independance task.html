@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    body{
+        min-height: 100vh;
+        margin:0;
+        display: grid;
+        place-content: center;
+    }
+  </style>
+  <body>
+    <h1></h1>
+    <script>
+        let container=document.querySelector("h1")
+            setTimeout(() => {
+        container.inerText=10;
+        setTimeout(() => {
+          container.inerText=9;
+          
+          setTimeout(() => {
+            container.inerText=8;
+            setTimeout(() => {
+              container.inerText=7;
+              setTimeout(() => {
+                container.inerText=6;
+                setTimeout(() => {
+                  container.inerText=5;
+                  setTimeout(() => {
+                    container.inerText=4;
+                    setTimeout(() => {
+                      container.inerText=3;
+                      setTimeout(() => {
+                        container.inerText=2;
+                        setTimeout(() => {
+                          container.inerText=1;
+                        }, 1000);
+                      }, 1000);
+                    }, 1000);
+                  }, 1000);
+                }, 1000);
+              }, 1000);
+            }, 1000);
+          }, 1000);
+        }, 1000);
+      }, 1000);
+    </script>
+  </body>
+</html>

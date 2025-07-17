@@ -44,15 +44,20 @@
         display: grid;
         justify-content: center;
       }
+
+      * {
+        box-sizing: border-box;
+      }
+
       .top-container {
         position: relative;
         text-align: center;
         color: white;
-        width: 375px;
+
         margin: 0;
         padding: 0;
         overflow: hidden;
-        
+
         img {
           width: 100%;
           margin-bottom: 0px;
@@ -71,7 +76,7 @@
       }
 
       .top-right {
-                position: absolute;
+        position: absolute;
         top: 8px;
         right: 16px;
         margin: 0px;
@@ -109,7 +114,7 @@
         display: grid;
         grid-template-columns: 1fr;
         align-content: center;
-        width: 375px;
+
         margin: 0px;
         /* outline: 2px solid black; */
         img {
@@ -141,61 +146,8 @@
           }
         }
       }
-      .lower-container {
-        position: relative;
-        text-align: center;
-        color: black;
-        width: 375px;
-        margin: 0;
-        padding: 0;
-        /* outline: 2px solid blueviolet; */
-        img {
-          width: 100%;
-          margin-bottom: 0px;
-        }
-        .lower-center1 {
-          position: absolute;
-          /* bottom: 10px; */
-          top: 230px;
-          left: 50%;
-          transform: translate(-50%, -50%);
-          /* justify-content: center; */
-          margin: 0px;
-          h2 {
-            font-family: var(--ff-Fraunces);
-            color: var(--primary-grapic-clr);
-            font-weight: 700;
-            font-size: 25.5x;
-          }
-          p {
-            font-family: var(--ff-Barlow);
-            color: var(--primary-grapic-clr);
-            font-weight: 600;
-          }
-        }
-        .lower-center2 {
-          position: absolute;
-          bottom: -94px;
-          /* top: 230px; */
-          left: 50%;
-          transform: translate(-50%, -50%);
-          /* justify-content: center; */
-          margin: 0px;
-          h2 {
-            font-family: var(--ff-Fraunces);
-            color: var(--secondary-photo-clr);
-            font-weight: 700;
-            font-size: 25.5x;
-          }
-          p {
-            font-family: var(--ff-Barlow);
-            color: var(--secondary-photo-clr);
-            font-weight: 600;
-          }
-        }
-      }
+
       .clients {
-        width: 375px;
         display: grid;
         grid-template-columns: 1fr;
         justify-items: center;
@@ -237,7 +189,6 @@
       .dishes {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        width: 375px;
 
         img {
           width: 100%;
@@ -248,7 +199,6 @@
         flex-direction: column;
         text-align: center;
         background-color: hsl(167, 44%, 70%);
-        max-width: 375px;
         height: 200px;
         padding: 30px;
         font-family: var(--ff-Barlow);
@@ -271,7 +221,7 @@
         }
         .icons {
           display: flex;
-          /* max-width: 375px; */
+          /* max- */
           gap: 30px;
           margin: 0 auto;
           justify-content: space-around;
@@ -284,13 +234,156 @@
           }
         }
       }
+
+      .cherry-container {
+        background: url("images/desktop/image-graphic-design.jpg");
+      }
+
+      .orange-container {
+        background: url("images/desktop/image-photography.jpg");
+      }
+
+      .cherry-container,
+      .orange-container {
+        height: 500px;
+        background-size: cover;
+
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        align-items: flex-end;
+        padding-bottom: 40px;
+
+        .lower-center {
+          margin: 0px;
+
+          /* background: orange; */
+          max-width: 340px;
+          h2 {
+            font-family: var(--ff-Fraunces);
+            color: var(--primary-grapic-clr);
+            font-weight: 700;
+            font-size: 25.5x;
+          }
+          p {
+            font-family: var(--ff-Barlow);
+            color: var(--primary-grapic-clr);
+            font-weight: 600;
+          }
+        }
+      }
+
+      header {
+        position: sticky;
+        top: 0px;
+
+        display: flex;
+        justify-content: space-between;
+        padding: 0 24px;
+        align-items: center;
+        background: hsl(199.9deg 100% 62.16%);
+
+        .logo {
+          color: var(--accent-txt-clr);
+          color: white;
+          font-family: var(--ff-Barlow);
+          font-weight: 700;
+          font-size: 30px;
+        }
+
+        nav > ul {
+          list-style: none;
+          display: flex;
+          align-items: center;
+          gap: 24px;
+
+          font-size: 20px;
+          font-family: var(--ff-Barlow);
+          color: white;
+          font-weight: 600;
+
+          li {
+            /* OFF */
+            display: none;
+
+            &:last-child {
+              /* ON */
+              display: block;
+            }
+
+            @media (min-width: 600px) {
+              /* ON */
+              display: block;
+
+              &:last-child {
+                /* OFF */
+                display: none;
+              }
+            }
+          }
+
+          button {
+            padding: 12px 18px;
+            font-size: 20px;
+            border-radius: 100px;
+            background: white;
+            border: none;
+
+            font-family: var(--ff-Fraunces);
+            font-weight: 700;
+          }
+        }
+      }
+
+      @media (min-width: 600px) {
+        /* header {
+          nav > ul {
+            li {
+              display: block;
+
+              &:last-child {
+                display: none;
+              }
+            }
+          }
+        } */
+
+        .middle-images {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+
+          .text {
+            /* padding: 30px; */
+            display: grid;
+            place-content: center;
+            text-align: left;
+          }
+
+          .text-2 {
+            grid-column: 1;
+            grid-row: 2;
+          }
+        }
+      }
     </style>
   </head>
   <body>
+    <header>
+      <h2 class="logo">sunnyside</h2>
+      <nav>
+        <ul>
+          <li>About</li>
+          <li>Service</li>
+          <li>Projects</li>
+          <li><button>Contact</button></li>
+          <li><i class="fa-solid fa-bars"></i></li>
+        </ul>
+      </nav>
+    </header>
+
     <div class="top-container">
+      <!-- <div class="top-left">sunnyside</div> -->
       <img src="images/mobile/image-header.jpg" alt="Snow" />
-      <div class="top-left">sunnyside</div>
-      <div class="top-right"><i class="fa-solid fa-bars"></i></div>
       <div class="centered">WE ARE CREATIVES</div>
       <div class="arrow">↓</div>
     </div>
@@ -306,7 +399,7 @@
         <h3 class="yellow">LEARN MORE</h3>
       </div>
       <img src="images/desktop/image-stand-out.jpg" alt="image-transform" />
-      <div class="text">
+      <div class="text text-2">
         <h2>Stand out to the right audience</h2>
         <p>
           Using a collaborative formula of designers, researchers,
@@ -315,11 +408,10 @@
         </p>
         <h3 class="red">LEARN MORE</h3>
       </div>
-    </div>
-    <div class="lower-container">
-      <div class="lower-image">
-        <img src="images/desktop/image-graphic-design.jpg" alt="Snow" />
-        <div class="lower-center1">
+
+      <div class="cherry-container">
+        <!-- <img src="images/desktop/image-graphic-design.jpg" alt="Snow" /> -->
+        <div class="lower-center">
           <h2>Graphic Design</h2>
 
           <p>
@@ -329,9 +421,9 @@
           </p>
         </div>
       </div>
-      <div class="lower-image">
-        <img src="images/desktop/image-photography.jpg" alt="Snow" />
-        <div class="lower-center2">
+      <div class="orange-container">
+        <!-- <img src="images/desktop/image-photography.jpg" alt="Snow" /> -->
+        <div class="lower-center">
           <h2>Photography</h2>
           <p>
             Increase your credibility by getting the most stunning, high-quality
@@ -340,6 +432,7 @@
         </div>
       </div>
     </div>
+
     <div class="clients">
       <div><h2>CLIENT TESTIMONIALS</h2></div>
       <div class="client">
