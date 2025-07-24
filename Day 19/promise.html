@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Promise Deep Dive</title>
+  </head>
+  <body>
+    <script>
+      /*
+        ======================
+        💡 PROMISE ESSENTIALS
+        ======================
+
+        ✅ Promise is a constructor that accepts a function with 2 parameters:
+           - resolve: callback to mark as fulfilled
+           - reject:  callback to mark as rejected
+
+        ✅ States of a Promise:
+           1. pending   → initial state
+           2. fulfilled → when resolved() is called
+           3. rejected  → when rejected() is called
+
+        ✅ Methods:
+           - .then(fn)     → on success
+           - .catch(fn)    → on failure
+           - .finally(fn)  → runs no matter what
+      */
+
+      // --- CASE 1: Fulfilled Promise ---
+      // ✅ Basic promise that resolves immediately (age ≥ 18)
+      function case1_fulfilled() {
+        const drivingTest = new Promise((resolve, reject) => {
+          let age = 18;
+          age >= 18
+            ? resolve("Allowed for Driving Test 🚐")
+            : reject("Try again after some years 👶🍼");
+        });
+        console.log(drivingTest); // Logs: Promise {<fulfilled>}
+        console.log(typeof drivingTest); // Logs: object
+      }
+
+      // --- CASE 2: Rejected Promise ---
+      // ❌ Triggers reject() because age < 18
+      function case2_rejected() {
+        const drivingTest = new Promise((resolve, reject) => {
+          let age = 14;
+          age >= 18
+            ? resolve("Allowed for Driving Test 🚐")
+            : reject("Try again after some years 👶🍼");
+        });
+        console.log(drivingTest); // Logs: Promise {<rejected>}
+        console.log(typeof drivingTest); // Logs: object
+      }
+
+      // --- CASE 3: Basic .then() usage ---
+      // 🎯 Handling fulfilled result using .then()
+      function case3_then() {
+        const drivingTest = Promise.resolve("Allowed for Driving Test 🚐");
+        drivingTest.then((msg) => console.log(msg));
+      }
+
+      // --- CASE 4: .then() Chaining ---
+      // 🔄 Multiple .then calls modify and pass data step by step
+      function case4_thenChaining() {
+        const drivingTest = Promise.resolve("Allowed for Driving Test 🚐");
+        drivingTest
+          .then((msg) => msg + " Super🎊")
+          .then((y) => "Cool " + y)
+          .then((y) => console.log(y + " Amazing"));
+      }
+
+      // --- CASE 5: Chaining with intermediate console.log ---
+      // ⚠️ console.log returns undefined, so value is lost in next .then
+      function case5_chainingConsole() {
+        const drivingTest = Promise.resolve("Allowed for Driving Test 🚐");
+        drivingTest
+          .then((msg) => msg + " Super🎊")
+          .then((y) => console.log("Cool " + y)) // returns undefined
+          .then((y) => console.log(y + " Amazing")); // logs: undefined Amazing
+      }
+
+      // --- CASE 6: Rejection caught with .catch ---
+      // 🔁 If rejected, skips all .then and lands in .catch
+      function case6_rejectCatch() {
+        const drivingTest = new Promise((resolve, reject) => {
+          let age = 14;
+          age >= 18
+            ? resolve("Allowed for Driving Test 🚐")
+            : reject("Try again after some years 👶🍼");
+        });
+
+        drivingTest
+          .then((msg) => msg + " Super🎊") // skipped
+          .then((y) => "Cool " + y) // skipped
+          .then((y) => console.log(y + " Amazing")) // skipped
+          .catch((err) => console.log("Accho Achho: " + err)); // handles error
+      }
+
+      // --- CASE 7: Rejection + Recovery + Continue ---
+      // 🧯 Manual reject in chain + recovery in .catch + continue in .then
+      function case7_recoverAfterCatch() {
+        const drivingTest = new Promise((resolve, reject) => {
+          let age = 19;
+          age >= 18
+            ? resolve("Allowed for Driving Test 🚐")
+            : reject("Try again after some years 👶🍼");
+        });
+
+        drivingTest
+          .then((msg) => msg + " Super🎊")
+          .then((y) => Promise.reject("Cool " + y)) // manually reject
+          .then((y) => y + " Amazing") // skipped
+          .catch((err) => "Accho Achho: " + err) // recovery handler // Accho Achho: Cool Allowed for Driving Test 🚐  Super🎊
+          .then((msg) => console.log("Marumadiyuma " + msg));
+      }
+
+      // --- CASE 8: Using .finally() ---
+      // 🧹 .finally always runs, even if rejected
+      function case8_finally() {
+        const drivingTest = new Promise((resolve, reject) => {
+          let age = 16;
+          age >= 18
+            ? resolve("Allowed for Driving Test 🚐")
+            : reject("Try again after some years 👶🍼");
+        });
+
+        drivingTest
+          .then((msg) => msg + " Super🎊")
+          .then((msg) => console.log("Marumadiyuma " + msg)) // may be skipped
+          .finally(() => console.log("All completed")); // always runs
+      }
+
+      // --- CASE 9: Async Simulation using setTimeout ---
+      // ⏳ Simulates async resolve using setTimeout
+      function case9_asyncWithDelay() {
+        const drivingTest = new Promise((resolve, reject) => {
+          let age = 18;
+          if (age >= 18) {
+            setTimeout(() => resolve("Allowed for Driving Test 🚐"), 5000); // async delay
+          } else {
+            reject("Try again after some years 👶🍼");
+          }
+        });
+
+        console.log(drivingTest); // Logs: Promise {<pending>}
+
+        drivingTest
+          .then((msg) => msg + " Super🎊")
+          .then((msg) => console.log("Marumadiyuma " + msg))
+          .finally(() => console.log("All completed"));
+      }
+
+      // ✅ Uncomment the one you want to test
+      // case1_fulfilled();
+      // case2_rejected();
+      // case3_then();
+      // case4_thenChaining();
+      // case5_chainingConsole();
+      // case6_rejectCatch();
+      // case7_recoverAfterCatch();
+      // case8_finally();
+      case9_asyncWithDelay();
+    </script>
+  </body>
+</html>

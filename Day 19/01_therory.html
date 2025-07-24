@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      body {
+        min-height: 100vh;
+        margin: 0;
+        display: grid;
+        place-content: center;
+
+        font-family: sans-serif;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 class="count-down">5</h1>
+
+    <script>
+      let count = 5;
+      const countdown = document.querySelector(".count-down");
+
+      // setTimeout(() => {
+      //   countdown.innerText = --count;
+      //   setTimeout(() => {
+      //     countdown.innerText = --count;
+      //     setTimeout(() => {
+      //       countdown.innerText = --count;
+      //       setTimeout(() => {
+      //         countdown.innerText = --count;
+      //         setTimeout(() => {
+      //           countdown.innerText = "Happy Independence Day";
+      //         }, 1000 * 1);
+      //       }, 1000 * 1);
+      //     }, 1000 * 1);
+      //   }, 1000 * 1);
+      // }, 1000 * 1);
+
+      // function setTimeout(callbackFn, timer) {
+      //   // if(timer is commplete){
+      //   //   callbackFn()
+      //   // }
+      // }
+
+      setTimeout(() => {
+        countdown.innerText = --count;
+      }, 1000 * 1);
+
+      setTimeout(() => {
+        countdown.innerText = --count;
+      }, 1000 * 2);
+
+      setTimeout(() => {
+        countdown.innerText = --count;
+      }, 1000 * 3);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- Async / Await 
+        1. Async - Sync (Looks)
+    
+    -->
+
+    <script type="module">
+      // task1_1 -> WebAPI
+      console.log(1);
+
+      async function task1_1() {
+        const res = await fetch(
+          "https://restcountries.com/v3.1/all?fields=name,flags,region,population,capital"
+        );
+
+        const countries = await res.json(); // returns Promise
+
+        const data = countries.map((country) => country.name.common);
+        // console.log(data);
+        console.log(2);
+      }
+
+      //   task1_1();
+
+      console.log(3);
+
+      async function task2() {
+        const countries = await fetch(
+          "https://restcountries.com/v3.1/all?fields=name,flags,region,population,capital"
+        )
+          .then((res) => res.json())
+          .catch((err) => []);
+
+        const data = countries.map((country) => country.name.common);
+        // console.log(data);
+        console.log(2);
+      }
+
+      //   task2();
+
+      function task3() {
+        try {
+          const data = JSON.parse('{"name": "google"}'); // JSON -> Object
+          console.log(data);
+          console.log(5 + 4);
+        } catch (err) {
+          console.log("Oopps: Something went wrong");
+        }
+      }
+
+      function task4() {
+        try {
+          const data = JSON.parse('{name": "google"}'); // JSON -> Object
+          console.log(data);
+          console.log(5 + 4);
+        } catch (err) {
+          console.log("Oopps: Something went wrong");
+        }
+      }
+
+      async function task5() {
+        try {
+          const res = await fetch(
+            "https://restcountries.com/v3.1/all?fields=name,flags,region,population,capital"
+          );
+
+          const countries = await res.json(); // returns Promise
+          const data = countries.map((country) => country.name.common);
+
+          return data;
+        } catch (err) {
+          console.log("Oopps: Something went wrong");
+        }
+
+        // console.log(data);
+        console.log(2);
+      }
+
+      //   All async functions returns promise
+
+      //   Top level - await
+      const result = await task5();
+
+      console.log(result);
+    </script>
+  </body>
+</html>

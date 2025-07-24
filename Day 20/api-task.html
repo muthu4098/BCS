@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 15px;
+
+        .program-6 {
+          font-family: "Inter", sans-serif;
+          border: 2px solid violet;
+          border-radius: 15px;
+          overflow: hidden;
+          font-size: larger;
+          box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2),
+            0 3px 4px 0 rgba(0, 0, 0, 0.19);
+          > img {
+            object-fit: cover;
+            width: 100%;
+            height: 200px;
+            /* border: 2px solid rgb(199, 199, 56); */
+            /* border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px; */
+          }
+          > h2,
+          p:nth-child(n + 1) {
+            /* text-align: center; */
+
+            padding: 0 10px;
+            span {
+              font-weight: 700;
+            }
+          }
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h1 class="count-down"></h1>
+    <div class="container"></div>
+    <ol class="listCountry"></ol>
+
+    <script>
+      // API Endpoint | fetch -> Promise
+
+      // Task 1.1 🗺️
+      // Print all the country names from the API https://restcountries.com/v3.1/all
+
+      function task1() {
+        fetch(
+          "https://restcountries.com/v3.1/all?fields=name,flags,region,population,capital"
+        )
+          .then((res) => res.json()) // .json() -> JSON -> JS Object
+          .then((countries) => {
+            const countryNames = countries.map(
+              (country) => country.name.common
+            );
+            return countryNames;
+          })
+          .then((data) => console.log(data));
+      }
+
+      function task1_1() {
+        fetch(
+          "https://restcountries.com/v3.1/all?fields=name,flags,region,population,capital"
+        )
+          .then((res) => res.json()) // .json() -> JSON -> JS Object
+          .then((countries) => countries.map((country) => country.name.common))
+          .then((data) => console.log(data));
+      }
+
+      task1_1();
+
+      // Task 1.2 🌍
+      // Print names of countries with population more than 10,000,000 (1 crore)
+      // Sort them in descending order of population
+      // Output format: ["India", "China", "Russia", ...]
+      function task1_2() {
+        fetch(
+          "https://restcountries.com/v3.1/all?fields=name,flags,region,population,capital"
+        )
+          .then((res) => res.json()) // .json() -> JSON -> JS Object
+          .then((countries) => {
+            let population = countries
+              .filter((country) => country.population >= 10000000)
+              .sort((a, b) => b.population - a.population)
+              // sort return positive & negative
+              .map((country) => country.name.common);
+            console.log(population);
+          })
+          .then((data) => console.log(data));
+      }
+
+      // task1_2();
+
+      // Task 1.3 📊
+      // Print countries with population more than 10,000,000
+
+      function task1_3() {
+        fetch(
+          "https://restcountries.com/v3.1/all?fields=name,flags,region,population,capital"
+        )
+          .then((res) => res.json()) // .json() -> JSON -> JS Object
+          .then((countries) => {
+            let population = countries
+              .filter((country) => country.population >= 10000000)
+              .map(
+                (country, index) =>
+                  `${index} ${country.name.common} ${country.population}`
+              )
+              .join("\n");
+            // sort return positive & negative
+
+            console.log(population);
+          })
+          .then((data) => console.log(data));
+      }
+
+      // task1_3();
+
+      // Output format:
+      // 1. India - 150000000
+      // 2. China - 120000000
+      // 3. Russia - 80000000
+      // ...
+
+      // Task 1.4 🔟
+      // Get the top 10 most populated countries in descending order
+      // Output format similar to Task 1.3
+
+      function task1_4() {
+        fetch(
+          "https://restcountries.com/v3.1/all?fields=name,flags,region,population,capital"
+        )
+          .then((res) => res.json()) // .json() -> JSON -> JS Object
+          .then((countries) => {
+            let population = countries
+              .filter((country) => country.population >= 10000000)
+              .slice(0, 10)
+              .map(
+                (country, index) =>
+                  `${index} ${country.name.common} ${country.population}`
+              )
+              .join("\n");
+            // sort return positive & negative
+            // let toptencountry=population
+
+            console.log(population);
+          })
+          .then((data) => console.log(data));
+      }
+
+      task1_4();
+
+      // Task 1.5 📋
+      // Display the Top 10 most populated countries on the screen as a list
+      // Each list item should show: <Country Name> - <Population>
+
+      function task1_5(){
+        fetch("https://restcountries.com/v3.1/all?fields=name,flags,region,population,capital"
+        )
+          .then((res) => res.json()) // .json() -> JSON -> JS Object
+          .then((countries) => {console.log(countries)
+            let population = countries
+              .filter((country) => country.population >= 10000000)
+              
+              .sort((a, b) => b.population - a.population)
+              .slice(0, 10)
+              .map(
+                (country, index) =>
+                  `${index} ${country.name.common} ${country.population}`
+              )
+              .join("\n");
+              console.log(population)
+            // document.createElement("div")
+          })
+          // sort return positive & negative
+          // .then((output) =>
+          //   output.forEach((ListInfo) => {
+          //     document.querySelector(
+          //       ".listCountry"
+          //     ).innerHTML += `<li>${ListInfo}</li>`;
+
+          //     // document.querySelector(".listCountry").append(output.join(" \n"));
+          //   })
+          // )
+
+          
+          .then((data) => console.log(data));
+      }
+          
+      task1_5();
+      // ===========================================================================
+
+      // Task 1.6 🌐
+      // Display all 250 countries on the screen with the following details:
+      // - Country Flag
+      // - Country Name
+      // - Population
+      // - Capital
+      // - Region
+//       function Task6() {
+//         fetch(
+//           "https://restcountries.com/v3.1/all?fields=name,flags,region,population,capital"
+//         )
+//           .then((res) => res.json())
+//           // .then((Checking) => console.log(Checking));
+//           .then((total_output) => {
+//             document.querySelector(".container").innerHTML = total_output
+//               .map(
+//                 (country) => `
+//               <div class = "program-6">
+//                 <img src="${country.flags.png}" />
+//                 <h2>${country.name.common}</h2>
+//                 <p> <span>Population : </span> ${country.population}</p>
+//                 <p> <span>Region : </span>${country.region}</p>
+//                 <p><span>Capital : </span>${country.capital} </p>
+//               </div>
+//                 `
+//               )
+//               .join(" ");
+//           });
+//       }
+
+//       Task6();
+//     </script>
+//   </body>
+// </html>
+// <!-- all settle -learn-
+ 
+// mock api.io-->
