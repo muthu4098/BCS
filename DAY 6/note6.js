@@ -45,18 +45,18 @@
 
 // // ===================================================
 
-// function checkAgeCategory(age = 18) {
-//   if (age < 18) {
-//     return "🧒 Minor";
-//   } else if (age < 65) {
-//     return "👨 Adult";
-//   } else {
-//     return "🧓 Senior";
-//   }
-// }
-// console.log(checkAgeCategory());
-// console.log(checkAgeCategory(12));
-// console.log(checkAgeCategory(65));
+function checkAgeCategory(age = 18) {
+  if (age < 18) {
+    return "🧒 Minor";
+  } else if (age < 65) {
+    return "👨 Adult";
+  } else {
+    return "🧓 Senior";
+  }
+}
+console.log(checkAgeCategory());
+console.log(checkAgeCategory(12));
+console.log(checkAgeCategory(65));
 // ===================================================
 
 // const wizard = {
