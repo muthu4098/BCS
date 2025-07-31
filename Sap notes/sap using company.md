@@ -1,8 +1,7 @@
-Here’s a curated list of well-known companies that implement SAP solutions, based on multiple recent sources. Note: actual implementations span hundreds of thousands of installations worldwide. Companies using SAP often deploy modules such as SAP S/4HANA, Ariba, SuccessFactors, Commerce Cloud, and Business AI solutions.
 
 ⸻
 
-🌍 Global & Fortune 500 Companies Using SAP
+## 🌍 Global & Fortune 500 Companies Using SAP
 	•	Microsoft – Uses SAP S/4HANA and Concur for finance, HR and expense management  ￼
 	•	IBM – Employs SAP S/4HANA, SAP Ariba, and Concur for procurement and employee travel  ￼ ￼
 	•	Apple – SAP used in finance, HR, inventory, orders (App Store, iTunes, online retail)  ￼
@@ -18,34 +17,31 @@ Here’s a curated list of well-known companies that implement SAP solutions, ba
 
 ⸻
 
-🏭 Additional Global Enterprises Using SAP
-	•	Nestlé – Utilizing cloud-based SAP for global ERP standardization and HR automation  ￼
-	•	Bosch – Uses SAP Service Cloud for unified customer support and aftersales service management  ￼
+## 🏭 Additional Global Enterprises Using SAP
+	1.	Nestlé – Utilizing cloud-based SAP for global ERP standardization and HR automation  ￼
+	2.	Bosch – Uses SAP Service Cloud for unified customer support and aftersales service management  
 
-⸻
+## 🇮🇳 India—Prominent SAP Adopters by Sector Energy, Oil & Gas, Chemicals, Manufacturing
+	1.	Reliance Industries – SAP deployed across petrochemical and telecom operations  ￼
+	2.	Indian Oil, BPCL, ONGC, GAIL – Use SAP for operational planning and coordination across refining and gas sectors  ￼
+	3.	Tata Steel, Jindal Steel, JSW, Essar Steel – SAP for manufacturing ERP, materials planning, and business intelligence  ￼
+	4.	Mahindra & Mahindra, Maruti Suzuki, TVS, Bajaj Auto, Ford India, Eicher – Automotive manufacturing and resource planning via SAP modules  ￼
 
-🇮🇳 India—Prominent SAP Adopters by Sector
-
-Energy, Oil & Gas, Chemicals, Manufacturing
-	•	Reliance Industries – SAP deployed across petrochemical and telecom operations  ￼
-	•	Indian Oil, BPCL, ONGC, GAIL – Use SAP for operational planning and coordination across refining and gas sectors  ￼
-	•	Tata Steel, Jindal Steel, JSW, Essar Steel – SAP for manufacturing ERP, materials planning, and business intelligence  ￼
-	•	Mahindra & Mahindra, Maruti Suzuki, TVS, Bajaj Auto, Ford India, Eicher – Automotive manufacturing and resource planning via SAP modules  ￼
-
-Consumer Goods & Pharma
+## Consumer Goods & Pharma
 	•	Hindustan Unilever, PepsiCo India, Nestlé India – Retail and FMCG companies implementing SAP procurement, finance, and HR systems  ￼
 	•	Dabur, Glenmark, Dr. Reddy’s, Sun Pharma, Biocon, Piramal Pharma, Nicholas Piramal, Emcure Pharma, Zandu – Pharmaceutical firms using SAP in production, quality, HR, supply chain  ￼
 
-Technology & Services
+## Technology & Services
 	•	TCS, Infosys, Wipro, HCL Technologies – Indian IT services companies both consuming and implementing SAP solutions globally  ￼
 
-Others
+## Others
 	•	Sudarshan Chemical, Marico, Ambuja Cement, Sterling Auxiliaries, etc. – SAP used across chemicals, materials, manufacturing sectors in India  ￼
 
 ⸻
 
-📌 Summary Snapshot
+## 📌 Summary Snapshot
 	•	Nearly all of the Fortune 500 and Forbes Global 2000 list companies run SAP systems—estimates suggest 92% of Forbes G2000 and 98% of top global brands use SAP in some capacity, and 77% of global financial transactions touch SAP products  ￼.
+	
 	•	SAP serves large-scale enterprises like Walmart, Amazon, Apple, Ford, BMW, L’Oréal, IBM, Chevron, Microsoft, Nestlé, Bosch globally, as well as major Indian conglomerates in sectors ranging from energy to manufacturing to consumer goods and pharmaceuticals.
 
 ⸻

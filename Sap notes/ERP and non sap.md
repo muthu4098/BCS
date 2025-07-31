@@ -1,4 +1,4 @@
-Here’s a clear and categorized **list of ERP and non-ERP systems**, including examples from SAP and other vendors:
+
 
 ---
 

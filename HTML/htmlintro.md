@@ -11,11 +11,11 @@ logical properities
 5.line height
 san sherif -sherif ,,next font fall back
 handwrrien
-serif
+# serif
 -serious
 -trusted
 -traditional
-san serif
+## san serif
 trend  
 fun
 not old guy
