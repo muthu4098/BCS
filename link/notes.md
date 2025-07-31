@@ -9,6 +9,4 @@
 ## gitup
 [ragavkumar](https://github.com/ragavkumarv/BCS-Training-June-2025)
 
-[bala](https://github.com/venkatbalakumar2405/bcs)
 
-[rvicky](https://github.com/vignesh-muniraj/BCS/tree/main/week_01_Test)
