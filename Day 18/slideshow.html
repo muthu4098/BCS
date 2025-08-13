@@ -1,117 +1,140 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
-      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Hollywood Slideshow</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      background-color: #111;
+      color: #fff;
+      margin: 0;
+      padding: 0;
+    }
+
+    .slideshow-container {
+      max-width: 600px;
+      margin: 50px auto;
+      position: relative;
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+      transition: opacity 0.5s ease-in-out;
+    }
+
+    .buttons {
+      margin: 15px 0;
+    }
+
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      margin: 0 10px;
+      cursor: pointer;
+      background-color: #444;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+    }
+
+    .radio-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+    }
+
+    .radio-buttons input[type="radio"] {
+      width: 15px;
+      height: 15px;
+      accent-color: #f00;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="slideshow-container">
+    <img 
+      id="slide" 
+      src="https://via.placeholder.com/600x400?text=Hollywood+1" 
+      alt="Hollywood Image" 
+      onmouseover="pauseSlideshow()" 
+      onmouseout="resumeSlideshow()" 
     />
-    <style>
-      body {
-        min-height: 100vh;
-        display: grid;
-        place-content: center;
-        max-width: 1000px;
-        margin: 0 auto;
-      }
-      .main-container {
-        display: flex;
-        width: 1000px;
-      }
-      .image {
-        object-fit: cover;
-        width: 100%;
-        height: 500px;
-      }
-      .status{
-        display: flex;
-        gap: 10px;
-        align-items: center;
-        justify-content: center;
-        margin-top: 15px;
-        button{
-           width: 10px;
-           height: 10px; 
-        }
-        #btn-2:active{
-            background-color: aquamarine;
-        }
-    }
-    </style>
-  </head>
-  <body>
-    <div class="main-container">
-      <button onclick="back()" aria-label="start the slideshow">
-        <i class="fa-solid fa-chevron-left"></i>
-      </button>
-      <div class="image"></div>
-      <button onclick="next()" aria-label="start the slideshow">
-        <i class="fa-solid fa-chevron-right"></i>
-      </button>
-    </div>
-      <div class="status">
-        <button id="btn-2" onclick="image1()">
-          <i class="fa-solid-1 fa-circle"></i>
-        </button>
-         <button id="btn-2" onclick="image2()">
-          <i class="fa-solid-1 fa-circle"></i>
-        </button>
-         <button id="btn-2" onclick="image3()">
-          <i class="fa-solid-1 fa-circle"></i>
-        </button>
-         <button id="btn-2" onclick="image4()">
-          <i class="fa-solid-1 fa-circle"></i>
-        </button>
+    
+    <div class="buttons">
+      <button onclick="prevSlide()">⟨ Prev</button>
+      <button onclick="nextSlide()">Next ⟩</button>
     </div>
 
-    <script>
-      const images = [
-        "Boult.jpg",
-        "makeup.png",
-        "af_pc_2x.CB792409181.jpg",
-        "sampoo.png",
-      ];
-      const imageDiv = document.querySelector(".image");
-      let imageIndex = 0;
+    <div class="radio-buttons">
+      <input type="radio" name="slide" onclick="goToSlide(0)" />
+      <input type="radio" name="slide" onclick="goToSlide(1)" />
+      <input type="radio" name="slide" onclick="goToSlide(2)" />
+      <input type="radio" name="slide" onclick="goToSlide(3)" />
+      <input type="radio" name="slide" onclick="goToSlide(4)" />
+    </div>
+  </div>
 
-      function starting() {
-        imageDiv.style.backgroundImage = url(${images[imageIndex]});
-        setInterval(() => {
-          next();
-        }, 2000);
-      }
-      starting();
-      
-     function next() {
-        imageIndex++;
-        imageDiv.style.backgroundImage = url(${images[imageIndex % images.length]});
+  <script>
+    const images = [
+      "https://www.google.com/url?sa=i&url=https%3A%2F%2Fzeenews.india.com%2Fweb-stories%2Fentertainment%2F10-highest-rated-tamil-movies-on-imdb-2626855&psig=AOvVaw12jq2agAfHYgte9PWm8hdz&ust=1754463280337000&source=images&cd=vfe&opi=89978449&ved=0CBUQjRxqFwoTCJCmr5aL844DFQAAAAAdAAAAABAE",
+      "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.imdb.com%2Findia%2Ftop-rated-tamil-movies%2F&psig=AOvVaw12jq2agAfHYgte9PWm8hdz&ust=1754463280337000&source=images&cd=vfe&opi=89978449&ved=0CBUQjRxqFwoTCJCmr5aL844DFQAAAAAdAAAAABAK",
+      "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.imdb.com%2Fsearch%2Ftitle%2F%3Ftitle_type%3Dfeature%26primary_language%3Dta%26sort%3Dmoviemeter%252Casc&psig=AOvVaw12jq2agAfHYgte9PWm8hdz&ust=1754463280337000&source=images&cd=vfe&opi=89978449&ved=0CBUQjRxqFwoTCJCmr5aL844DFQAAAAAdAAAAABAU",
+      "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.imdb.com%2Fsearch%2Ftitle%2F%3Ftitle_type%3Dfeature%26primary_language%3Dta%26sort%3Dmoviemeter%252Casc&psig=AOvVaw12jq2agAfHYgte9PWm8hdz&ust=1754463280337000&source=images&cd=vfe&opi=89978449&ved=0CBUQjRxqFwoTCJCmr5aL844DFQAAAAAdAAAAABAo",
+      "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.imdb.com%2Fsearch%2Ftitle%2F%3Ftitle_type%3Dfeature%26primary_language%3Dta%26sort%3Dmoviemeter%252Casc&psig=AOvVaw12jq2agAfHYgte9PWm8hdz&ust=1754463280337000&source=images&cd=vfe&opi=89978449&ved=0CBUQjRxqFwoTCJCmr5aL844DFQAAAAAdAAAAABAy"
+    ];
+
+    let current = 0;
+    let intervalId;
+    const slide = document.getElementById("slide");
+    const radios = document.querySelectorAll('input[type="radio"]');
+
+    function showSlide(index) {
+      slide.src = images[index];
+      radios[index].checked = true;
     }
-      function back() {
-        imageIndex--;
-        imageDiv.style.backgroundImage = url(${images[imageIndex % images.length]});
-      }
-   function image1(){
-       imageIndex++;
-    imageDiv.style.backgroundImage =  url(${images[0]});
-   }
-   function image2(){
-    imageIndex++;
-    imageDiv.style.backgroundImage =  url(${images[1]});
-   }
-   function image3(){
-        imageIndex++;
-    imageDiv.style.backgroundImage =  url(${images[2]});
-   }
-   function image4(){
-        imageIndex++;
-    imageDiv.style.backgroundImage =  url(${images[3]});
-   }
 
-    </script>
-  </body>
+    function nextSlide() {
+      current = (current + 1) % images.length;
+      showSlide(current);
+    }
+
+    function prevSlide() {
+      current = (current - 1 + images.length) % images.length;
+      showSlide(current);
+    }
+
+    function goToSlide(index) {
+      current = index;
+      showSlide(index);
+    }
+
+    function startSlideshow() {
+      intervalId = setInterval(() => {
+        nextSlide();
+      }, 3000); // Change image every 3 seconds
+    }
+
+    function pauseSlideshow() {
+      clearInterval(intervalId);
+    }
+
+    function resumeSlideshow() {
+      startSlideshow();
+    }
+
+    window.onload = () => {
+      showSlide(current);
+      startSlideshow();
+    };
+  </script>
+
+</body>
 </html>

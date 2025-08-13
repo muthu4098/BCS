@@ -8,28 +8,39 @@
     <style>
       .box1 {
         background: plum;
+        width: 200px;
       }
 
       .box2 {
         background: purple;
+        width: 150px;
       }
 
       .box3 {
         background: pink;
+        width: 100px;
       }
 
-      .container {
-        display: grid;
-        /* 1fr - fractional unit 1 : 1 */
-        grid-template-columns: 1fr 1fr;
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-template-columns: 1fr 2fr 1fr;
-        grid-template-columns: repeat(10, 1fr);
-        grid-template-columns: 2fr repeat(2, 1fr);
-        grid-template-columns: repeat(12, 1fr);
-        grid-template-columns: 2fr 1fr 1fr;
+      /* @media (min-width: 500px) {
+        .container {
+          display: flex;
+          flex-wrap: wrap;
+        }
+      } */
 
-        gap: 8px 16px;
+      @media (min-width: 500px) {
+        .container {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+
+      @media (min-width: 900px) {
+        .container {
+          grid-template-columns: repeat(3, 1fr);
+          max-width: 1150px;
+          margin: 0 auto;
+        }
       }
     </style>
   </head>
@@ -49,6 +60,22 @@
         Voluptatibus, voluptatem. Lorem ipsum dolor sit amet consectetur
         adipisicing elit. Voluptatibus, voluptatem.
       </div>
+
+      <div class="box1">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus,
+        voluptatem.
+      </div>
+      <div class="box2">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus,
+        voluptatem. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        Voluptatibus, voluptatem.
+      </div>
+      <div class="box3">
+        voluptatem. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        Voluptatibus, voluptatem. Lorem ipsum dolor sit amet consectetur
+        adipisicing elit. Voluptatibus, voluptatem.
+      </div>
+
       <div class="box1">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus,
         voluptatem.

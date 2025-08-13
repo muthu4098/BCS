@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      .form-container {
+        display: flex;
+        flex-direction: column;
+      }
+
+      input {
+        margin-bottom: 16px;
+      }
+    </style>
+  </head>
+  <body>
+    <form class="form-container">
+      <!-- Form element (90% input) -->
+      <div>
+        <label for="name">Name:</label>
+        <input
+          type="text"
+          placeholder="Mike"
+          id="name"
+          value="Vicky"
+          disabled
+        />
+      </div>
+
+      <!-- +, -, . -->
+      <label for="age">Age:</label>
+      <input
+        min="18"
+        max="60"
+        type="number"
+        placeholder="18"
+        id="age"
+        value="22"
+        disabled
+      />
+
+      <!-- pattern (mdn) -->
+      <label for="password">Password:</label>
+      <input type="password" id="password" minlength="8" maxlength="12" />
+
+      <label for="username">Email:</label>
+      <input type="email" id="username" placeholder="mike@gmail.com" />
+
+      <label for="dob">Date of Birth:</label>
+      <input type="date" id="dob" />
+
+      <h3>Gender</h3>
+      <div>
+        <input type="radio" id="male" name="gender" value="M" />
+        <label for="male">Male</label>
+      </div>
+      <div>
+        <input type="radio" id="female" name="gender" value="F" checked />
+        <label for="female">Female</label>
+      </div>
+      <div>
+        <input type="radio" id="other" name="gender" value="O" />
+        <label for="other">Other</label>
+      </div>
+
+      <h3>Hobbies</h3>
+      <div>
+        <input type="checkbox" id="cricket" name="hobbies" value="cricket" />
+        <label for="cricket">Cricket</label>
+      </div>
+      <div>
+        <input type="checkbox" id="tt" name="hobbies" value="tt" checked />
+        <label for="tt">Table Tennis</label>
+      </div>
+      <div>
+        <input type="checkbox" id="fb" name="hobbies" value="fb" disabled />
+        <label for="fb">Football</label>
+      </div>
+      <div>
+        <textarea placeholder="About me" rows="10" cols="20">Super</textarea>
+      </div>
+
+      <select name="pets">
+        <option value="">--Please choose an option--</option>
+        <option value="dog">Dog</option>
+        <option value="cat">Cat</option>
+        <option value="hamster">Hamster</option>
+        <option value="parrot">Parrot</option>
+        <option value="spider">Spider</option>
+        <option value="goldfish">Goldfish</option>
+      </select>
+
+      <button type="reset">Reset</button>
+
+      <button type="submit">Submit</button>
+    </form>
+  </body>
+</html>
