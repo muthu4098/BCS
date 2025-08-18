@@ -97,7 +97,7 @@
    * Defines a form for user input. Key attributes: `action` (submission URL), `method` (GET or POST).
 
 **Advanced**
-8\. What is the difference between `<iframe>` and `<embed>`?
+8. What is the difference between `<iframe>` and `<embed>`?
 
 * `<iframe>` embeds another HTML document; `<embed>` embeds external content like PDF, videos.
 
