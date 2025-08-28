@@ -113,4 +113,4 @@ You could use a **flowchart or timeline GIF** for visual explanation:
 
 ---
 
-Would you like this formatted into a PowerPoint or visual poster as well?
+

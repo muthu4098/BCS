@@ -29,3 +29,9 @@ extendbility
 matainabilllity
 performance
 resuability
+
+## lazy evaluvation 
+   -  functional programing
+   - efficent storage
+   - samrt work
+  
