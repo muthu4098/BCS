@@ -15,3 +15,4 @@
 [ragav slides](https://slides-test.web.app/)
 [ravaga old slide](https://resources.ragavkumarv.com/)
 [normilaization](https://docs.google.com/presentation/d/1YgWpvJyJPHT8mUrM_9h3J8HpZ6Tu5M8oBg2oeVmi_kE/edit)
+[Sql task ragav](https://learn-sql.ragavkumarv.com/)
