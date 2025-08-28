@@ -262,3 +262,14 @@ FROM employees;
             ON movies.id = boxoffice.movie_id
     GROUP BY director;
     ```
+
+# Exercise 13 — Tasks
+- Add the studio's new production, Toy Story 4 to the list of movies (you can use any director)
+    ```sql
+    INSERT INTO movies VALUES (4, "Toy Story 4", "Muthu Director", 2025, 90);
+   ```
+
+- Toy Story 4 has been released to critical acclaim! It had a rating of 8.7, and made 340 million domestically and 270 million internationally. Add the record to the BoxOffice table.
+    ```sql
+    INSERT INTO boxoffice VALUES (4, 8.2,23456789, 20254590);
+    ```
